@@ -17,15 +17,15 @@ As a traveler, you enter basic trip details (destination, duration, temperature 
 If you’re near or over the limit, it offers Smart Suggestions to swap or reduce items.
 
 # Feature
-- Trip intake: Destination, days, temperature band (Freezing/Cold/Cool/Warm/Hot), activities (e.g., Sightseeing, Swimming/Surfing, Skiing/Snowboarding/Snow, Outdoor & Adventure, Work & Study, Family & Friends), and airline selection.
+- Trip intake: Destination, days, temperature band (Freezing/Cold/Cool/Warm/Hot), activities (e.g., Sightseeing, Swimming/Surfing, Outdoor & Adventure, Work & Study, Formal Event/Party Family & Friends), and airline selection or manual baggage rules
   
-- Auto-generated packing list: Categorized into Clothing, Toiletries, Gadgets & Accessories, Shoes, Documents & Essentials, tuned to your inputs.
+- Auto-generated packing list: Categorized into Clothing, Toiletries, Gadgets & Accessories, Shoes, Documents & Essentials, tuned to your inputs using predefined templates.
   
 - Customize: Check/uncheck, change quantities, add new items with weight category (Light < 0.3 kg, Medium 0.3–0.8 kg, Heavy > 0.8 kg).
   
 - Weight Estimator: Adds up the carry-on’s base weight + all items (from a built-in weight library and user additions) and shows total estimated weight.
 
-- Airline comparison: Color indicator—Green (under 9.5 kg), Yellow (close to 10 kg), Red (over 10 kg).
+- Airline Weight Indicator: Shows a color signal based on the weight status — Green (under limit), Yellow (close to limit), and Red (over limit).
 
 - Smart Suggestions: If near/over limit, proposes swaps and reductions (e.g., “Swap boots (1.2 kg) for sneakers (0.7 kg)”, “You may not need a heavy jacket at 25 °C”, “Mix & match 4 tops with 2 bottoms for 7 days”).
 
@@ -130,7 +130,7 @@ The sidebar is where the user enters all trip information. This includes their n
 
 **Main Area:**
 
-The main area displays the results. It shows a trip summary, which also has a downloadable CSV of the list, the generated packing list, item weights, and editing options. It also shows the total weight and includes the button that runs the greedy algorithm to automatically trim items if the list is too heavy. The button “Auto-trim to fit airline limit” calls the described greedy algorithm (greedy_trim_to_limit_verbose), updates the packing list, and shows which items were removed.
+The main area displays the results. It shows a trip summary, which also has a downloadable CSV of the list, the generated packing list, item weights, and editing options. It also shows the total weight and includes the button “Auto-trim to fit airline limit”, calls the described greedy algorithm (greedy_trim_to_limit_verbose) to automatically trim items if the list is too heavy. It updates the packing list and shows which items were removed.
 
 # Further Improvements
 - Export in PDF for sharable packing list
