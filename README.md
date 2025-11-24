@@ -8,6 +8,7 @@
 5. Installation & Execution
 6. Usage Guide
 7. Data Structures & Algorithms
+8. Streamlit Front-End
 9. Further Improvements
 10. Bibliography & Webgraphy
 11. Credits
@@ -44,7 +45,7 @@ Contains:
 `README.md` — This document.
 
 # Prerequisites & Environment
-- Python ??
+- Python 3.8 or later
 - Our project is designed to run entirely with built-in libraries (no external installation required).
 
 # Installation & Execution
