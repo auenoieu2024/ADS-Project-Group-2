@@ -121,7 +121,7 @@ The algorithm removes items from the top of that sorted list until the weight be
 4. show_weight_status(items, weight_table, limit_kg, buffer=0.3) - Displays the current weight state compared to the target limit.
 5. greedy_trim_to_limit_verbose - Trims items until the weight is below the weight limit
 
-# Streamlit Front-End:
+# Streamlit Front-End
 This file implements the Smart Packing List – Short Trips web app using Streamlit. **https://public-c6fjnoltdjcxtqlzvegd2r.streamlit.app/**
 
 **Sidebar:**
