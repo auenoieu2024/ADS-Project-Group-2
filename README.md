@@ -89,7 +89,9 @@ Save the updated list; optionally view airline upgrade/pre-purchase info (mock).
 
 # Data Structures & Algorithms
 The following variable names are the main dictionaries used to store data of user information, airline rules, clothing items/weights, activity items/weights, templates, and all packing-related details
+
 **Main Dictionaries**
+
 1. STATE - holds user data: name, destination, weather, airline details, limits, activities, etc.
 2. AIRLINES - database for airline baggage rules
 3. activity_template - defines which items should be added when the user selects a specific activity
@@ -101,12 +103,14 @@ The following variable names are the main dictionaries used to store data of use
 The following variable names are the supporting dictionaries used to store data of airline shortcuts, lookup indexes, item-priority rules, and trimming results
 
 **Supporting Dictionaries**
+
 1. aliases - common acronyms for airlines
 2. index - normalised airline-name for look up
 3. PRIORITY_RANK - priority levels for items used for trimming
 4. info - summary dictionary after trimming
    
 **Main Algorithm**
+
 The project uses a greedy algorithm to reduce a set of items so that their total weight stays under the airline's weight limit. It  removes the item that seems best to remove at that moment. 
 The algorithm starts with every item split into individual units. Instead of removing a clothing category, it removes things one at a time. Each unit is assigned a priority value, and the algorithm removes the heavier one first.
 The algorithm removes items from the top of that sorted list until the weight becomes low enough, and it stops. The algorithm will not remove essential items like underwear and socks stored in HARD_KEEP to ensure important items are removed when necessary.
