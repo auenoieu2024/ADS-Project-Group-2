@@ -9,9 +9,8 @@
 6. Usage Guide
 7. Data Structures & Algorithms
 9. Further Improvements
-10. Bibliography / Webgraphy
+10. Bibliography & Webgraphy
 11. Credits
-
 
 # Introduction of Our Product: Personalized Packing List & Weight Estimator
 As a traveler, you enter basic trip details (destination, duration, temperature range, activities, and airline). The app generates a categorized packing list you can customiz and estimates luggage weight—including your carry-on’s base weight—then compares it to your selected airline’s limit. 
@@ -19,11 +18,11 @@ If you’re near or over the limit, it offers Smart Suggestions to swap or reduc
 
 # Feature
 - Trip intake: Destination, days, temperature band (Freezing / Cold / Cool / Warm / Hot), activities (e.g., Sightseeing, Swimming/Surfing, Skiing/Snowboarding/Snow, Outdoor & Adventure, Work & Study, Family & Friends), and airline selection.
-
+  
 - Auto-generated packing list: Categorized into Clothing, Toiletries, Gadgets & Accessories, Shoes, Documents & Essentials, tuned to your inputs.
-
+  
 - Customize: Check/uncheck, change quantities, add new items with weight category (Light < 0.3 kg, Medium 0.3–0.8 kg, Heavy > 0.8 kg).
-
+  
 - Weight Estimator: Adds up the carry-on’s base weight + all items (from a built-in weight library and user additions) and shows total estimated weight.
 
 - Airline comparison: Color indicator—Green (under 9.5 kg), Yellow (close to 10 kg), Red (over 10 kg).
@@ -45,8 +44,8 @@ Contains:
 `README.md` — This document.
 
 # Prerequisites & Environment
-- Python 3.8–3.12
-- Built-in libraries only (no external installs).
+- Python ??
+- Our project is designed to run entirely with built-in libraries (no external installation required).
 
 # Installation & Execution
 Click Code → Download ZIP on the repository page.
@@ -90,11 +89,25 @@ Save the updated list; optionally view airline upgrade/pre-purchase info (mock).
 
 # Data Structures & Algorithms
 
-# Further Improvements
 
-# Bibliography / Webgraphy
+# Further Improvements
+- Export in PDF for sharable packing list
+- Invite collaborators
+- Weather forecast integration for exact prediction per dates and destination
+- Calendar import
+
+# Bibliography & Webgraphy
 ADS course slides (Simple Search, Greedy, Graphs, Trees, etc.)
 Airline public baggage pages (for reference limits)
 
 # Credits
-Authors for this projects are:
+Authors for this project are:
+Loraine Nieto
+Aoi Ueno
+Estelle Arnandar
+Eliza Whifield
+Mohamed Embaby
+Manvi Gupta
+Seif Omara
+Faris Selimovic
+
