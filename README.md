@@ -2,9 +2,99 @@
 
 # Table of contents
 1. Introduction
-2. Usage
-3. Further Improvements
+2. Feature
+3. Files
+4. Prerequisites & Environment
+5. Installation & Execution
+6. Usage Guide
+7. Data Structures & Algorithms
+9. Further Improvements
+10. Bibliography / Webgraphy
+11. Credits
 
-# Intorduction
-As a student who travels, I want to input my trip details easily so that the app can automatically create a suggested packing list according to my trip details that will fit my luggage. I want an easy way to create a packing list that fits my destination, activities, the weather, and trip length. The app should suggest a packing list and Ill be able to edit, add, and delete items on the form. Lastly, the app should be able to estimate the luggage weight based on the things I’ll be bringing.  
 
+# Introduction of Our Product: Personalized Packing List & Weight Estimator
+As a traveler, you enter basic trip details (destination, duration, temperature range, activities, and airline). The app generates a categorized packing list you can customiz and estimates luggage weight—including your carry-on’s base weight—then compares it to your selected airline’s limit. 
+If you’re near or over the limit, it offers Smart Suggestions to swap or reduce items.
+
+# Feature
+- Trip intake: Destination, days, temperature band (Freezing / Cold / Cool / Warm / Hot), activities (e.g., Sightseeing, Swimming/Surfing, Skiing/Snowboarding/Snow, Outdoor & Adventure, Work & Study, Family & Friends), and airline selection.
+
+- Auto-generated packing list: Categorized into Clothing, Toiletries, Gadgets & Accessories, Shoes, Documents & Essentials, tuned to your inputs.
+
+- Customize: Check/uncheck, change quantities, add new items with weight category (Light < 0.3 kg, Medium 0.3–0.8 kg, Heavy > 0.8 kg).
+
+- Weight Estimator: Adds up the carry-on’s base weight + all items (from a built-in weight library and user additions) and shows total estimated weight.
+
+- Airline comparison: Color indicator—Green (under 9.5 kg), Yellow (close to 10 kg), Red (over 10 kg).
+
+- Smart Suggestions: If near/over limit, proposes swaps and reductions (e.g., “Swap boots (1.2 kg) for sneakers (0.7 kg)”, “You may not need a heavy jacket at 25 °C”, “Mix & match 4 tops with 2 bottoms for 7 days”).
+
+
+# File
+`Final_code_project.py` — Main program: trip intake → packing list generator → weight estimator → airline check → smart suggestions → save/load.
+
+Contains:
+- Input screens/prompts
+- Category builders for Clothing / Toiletries / Gadgets & Accessories / Shoes / Documents
+- Weight library (e.g., Heavy Coat 1.0 kg, Denim Pants 0.6 kg, Shirt 0.15 kg, Scarf 0.2 kg, Shoes 0.8 kg, Toiletries 1.0 kg)
+- Add-item flow (with Light/Medium/Heavy buckets)
+- Greedy weight advisor (see sections 7 & 8)
+- Airline limit check + color indicator
+
+`README.md` — This document.
+
+# Prerequisites & Environment
+- Python 3.8–3.12
+- Built-in libraries only (no external installs).
+
+# Installation & Execution
+Click Code → Download ZIP on the repository page.
+Unzip to any folder.
+Double-click `Final_code_project.py` to start.
+
+# Usage Guide
+1. Create Trip
+Tap “+” → fill:
+Trip name (e.g., “Madrid Trip”)
+Duration (integer days)
+Temperature band (Freezing / 0–10 Cold / 11–20 Cool / 20–25 Warm / >25 Hot)
+Activities (choose one or multiple)
+Airline (for baggage limit check)
+Base carry-on weight (e.g., 1.0–1.5 kg)
+
+2. Review Summary
+Example:
+Destination: Madrid
+Duration: 7 days
+Weather: Cool (11–20 °C)
+Activity: Family & Friends
+Airline saved for later comparison
+
+3. Generate Packing List
+App builds essentials by category; you check/uncheck and set quantities (e.g., Shirts = 3).
+
+4. Add Items (optional)
+“Add New Item” → name + weight bucket: Light / Medium / Heavy.
+
+5. Weight Estimator
+Sums: item weights × quantities + base carry-on.
+Shows total and color indicator vs airline (Green <9.5 kg, Yellow ~10 kg, Red >10 kg).
+
+6. Smart Suggestions
+If near/over limit, shows concrete swap/reduce tips. Accept / decline / ignore, then recalculate.
+
+7. Finish
+Save the updated list; optionally view airline upgrade/pre-purchase info (mock).
+
+
+# Data Structures & Algorithms
+
+# Further Improvements
+
+# Bibliography / Webgraphy
+ADS course slides (Simple Search, Greedy, Graphs, Trees, etc.)
+Airline public baggage pages (for reference limits)
+
+# Credits
+Authors for this projects are:
