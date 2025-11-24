@@ -13,11 +13,11 @@
 11. Credits
 
 # Introduction of Our Product: Personalized Packing List & Weight Estimator
-As a traveler, you enter basic trip details (destination, duration, temperature range, activities, and airline). The app generates a categorized packing list you can customiz and estimates luggage weight—including your carry-on’s base weight—then compares it to your selected airline’s limit. 
+As a traveler, you enter basic trip details (destination, duration, temperature range, activities, and airline). The app generates a categorized packing list you can customiz and estimates luggage weight, including your carry-on base weight, then compares it to your selected airline’s limit. 
 If you’re near or over the limit, it offers Smart Suggestions to swap or reduce items.
 
 # Feature
-- Trip intake: Destination, days, temperature band (Freezing / Cold / Cool / Warm / Hot), activities (e.g., Sightseeing, Swimming/Surfing, Skiing/Snowboarding/Snow, Outdoor & Adventure, Work & Study, Family & Friends), and airline selection.
+- Trip intake: Destination, days, temperature band (Freezing/Cold/Cool/Warm/Hot), activities (e.g., Sightseeing, Swimming/Surfing, Skiing/Snowboarding/Snow, Outdoor & Adventure, Work & Study, Family & Friends), and airline selection.
   
 - Auto-generated packing list: Categorized into Clothing, Toiletries, Gadgets & Accessories, Shoes, Documents & Essentials, tuned to your inputs.
   
