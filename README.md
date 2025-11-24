@@ -88,6 +88,34 @@ Save the updated list; optionally view airline upgrade/pre-purchase info (mock).
 
 
 # Data Structures & Algorithms
+The following variable names are the main dictionaries used to store data of user information, airline rules, clothing items/weights, activity items/weights, templates, and all packing-related details
+**Main Dictionaries**
+1. STATE - holds user data: name, destination, weather, airline details, limits, activities, etc.
+2. AIRLINES - database for airline baggage rules
+3. activity_template - defines which items should be added when the user selects a specific activity
+4. activity_weight - weights for all activity-related items
+5. clothes - look up table for all clothing items with weather type and weight
+6. template - default data for initial suggestion of clothes for each weather type (Freezing, Cold, Cool, Warm, Hot) with default quantity
+7. items - the user’s actual packing list being built and modified
+8. WEIGHT_TABLE - merged weight lookup table combining clothing weights and activity item weights
+The following variable names are the supporting dictionaries used to store data of airline shortcuts, lookup indexes, item-priority rules, and trimming results
+
+**Supporting Dictionaries**
+1. aliases - common acronyms for airlines
+2. index - normalised airline-name for look up
+3. PRIORITY_RANK - priority levels for items used for trimming
+4. info - summary dictionary after trimming
+   
+**Main Algorithm**
+The project uses a greedy algorithm to reduce a set of items so that their total weight stays under the airline's weight limit. It  removes the item that seems best to remove at that moment. 
+The algorithm starts with every item split into individual units. Instead of removing a clothing category, it removes things one at a time. Each unit is assigned a priority value, and the algorithm removes the heavier one first.
+The algorithm removes items from the top of that sorted list until the weight becomes low enough, and it stops. The algorithm will not remove essential items like underwear and socks stored in HARD_KEEP to ensure important items are removed when necessary.
+
+1. total_weight(quantities, weight_table) - Calculates the total weight of all items.
+2. PRIORITY_RANK - priority levels for items used for trimming
+3. _priority(item) - Looks up the rank
+4. show_weight_status(items, weight_table, limit_kg, buffer=0.3) - Displays the current weight state compared to the target limit.
+5. greedy_trim_to_limit_verbose - Trims items until the weight is below the weight limit
 
 
 # Further Improvements
