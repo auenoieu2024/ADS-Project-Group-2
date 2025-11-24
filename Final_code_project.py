@@ -13,7 +13,7 @@ MAX_DAYS_AHEAD = 120  # for trip date warning
 
 
 # -----------------------
-# 1. Welcome + basic info
+# 1. Welcome + Info Input
 # -----------------------
 
 def welcome():
@@ -126,7 +126,7 @@ def ask_trip_start_date():
 
 
 # -----------------------
-# 3. Airline hash table + helpers
+# 3. Airline hash table 
 # -----------------------
 
 AIRLINES = {
@@ -334,9 +334,9 @@ def _strip_accents(s: str) -> str:
 
 def _normalize_name(s: str) -> str:
     s = _strip_accents(s.lower())
-    s = re.sub(r'\(.*?\)', ' ', s)                 # remove parenthetical notes
-    s = re.sub(r'\b(airlines?|airways)\b', ' ', s) # drop generic words
-    s = re.sub(r'[^a-z0-9]+', ' ', s)              # keep alnum
+    s = re.sub(r'\(.*?\)', ' ', s)              
+    s = re.sub(r'\b(airlines?|airways)\b', ' ', s) 
+    s = re.sub(r'[^a-z0-9]+', ' ', s)             
     return re.sub(r'\s+', ' ', s).strip()
 
 
@@ -451,7 +451,7 @@ def ask_airline_by_name(AIRLINES, STATE):
 
 
 # -----------------------
-# 4. Activities
+# 4. Activities Hash Table
 # -----------------------
 
 activity_template = {
@@ -556,7 +556,8 @@ def temp():
         if choice == "5":
             return "Hot"
         print("Please enter a number between 1 and 5.")
-
+        
+#Hash table of clothes + weight
 
 clothes = {
     # Freezing
@@ -698,15 +699,14 @@ def edit_items(quantities):
     return quantities
 
 
-# -----------------------
-# 6. (Optional) Greedy trimming helpers
-# -----------------------
-
 # Merge clothes + activity_weight into one weight table for trimming
 WEIGHT_TABLE = {}
 WEIGHT_TABLE.update(clothes)
 WEIGHT_TABLE.update(activity_weight)
 
+# -----------------------
+# 6. Greedy Algorithm
+# ----------------------
 
 def total_weight(quantities, weight_table):
     w = 0.0
@@ -799,7 +799,7 @@ def run_trim_final(items, use_verbose=True, safety_buffer=0.3):
 
 
 # -----------------------
-# 7. Main (kept simple)
+# 7. Main 
 # -----------------------
 
 def main():
@@ -858,3 +858,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
