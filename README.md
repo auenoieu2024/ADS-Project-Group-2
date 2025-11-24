@@ -121,6 +121,16 @@ The algorithm removes items from the top of that sorted list until the weight be
 4. show_weight_status(items, weight_table, limit_kg, buffer=0.3) - Displays the current weight state compared to the target limit.
 5. greedy_trim_to_limit_verbose - Trims items until the weight is below the weight limit
 
+# Streamlit Front-End:
+This file implements the Smart Packing List – Short Trips web app using Streamlit. **https://public-c6fjnoltdjcxtqlzvegd2r.streamlit.app/**
+
+**Sidebar:**
+
+The sidebar is where the user enters all trip information. This includes their name, destination, travel dates, airline, baggage rules, expected weather, and activities. When the user clicks “Generate / Reset packing list,” the sidebar inputs are used to build the initial packing list. The app generates an initial packing list with the templates and shared WEIGHT_TABLE
+
+**Main Area:**
+
+The main area displays the results. It shows a trip summary, which also has a downloadable CSV of the list, the generated packing list, item weights, and editing options. It also shows the total weight and includes the button that runs the greedy algorithm to automatically trim items if the list is too heavy. The button “Auto-trim to fit airline limit” calls the described greedy algorithm (greedy_trim_to_limit_verbose), updates the packing list, and shows which items were removed.
 
 # Further Improvements
 - Export in PDF for sharable packing list
