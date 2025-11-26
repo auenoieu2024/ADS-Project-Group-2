@@ -134,7 +134,7 @@ The sidebar is where the user enters all trip information. This includes their n
 The main area displays the results. It shows a trip summary, which also has a downloadable CSV of the list, the generated packing list, item weights, and editing options. It also shows the total weight and includes the button “Auto-trim to fit airline limit”, calls the described greedy algorithm (greedy_trim_to_limit_verbose) to automatically trim items if the list is too heavy. It updates the packing list and shows which items were removed.
 
 # Further Improvements
-- Export in PDF for sharable packing list
+- Export in other platforms for shareable packing list
 - Invite collaborators
 - Weather forecast integration for exact prediction per dates and destination
 - Calendar import
